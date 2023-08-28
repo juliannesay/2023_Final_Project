@@ -1,5 +1,5 @@
 # Team Name
-Temporary Team Name
+Julianne's Team
 
 ### Team Members
 1. Julianne Say

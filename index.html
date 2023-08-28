@@ -1,29 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-            <title></title>
 
-        <!--put your external stylesheet links here-->
-        <link rel="stylesheet" href="css/style.css">
-        <!--[if IE<9]>
-            <link rel="stylesheet" href="css/style.ie.css">
-        <![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Map Application</title>
 
-         <!--you can also place internal styles here;
-             place these within <style> tags-->
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+
+    <!-- Geocoder CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+
+    <!-- Marker Cluster CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+
+    <!-- Search plugin CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-search@3.0.0/dist/leaflet-search.min.css" />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="map-title">
+        <img src="img/NY_state.png" alt="Icon"> 
+        New York State Health Facility Finder
+      </div>
+
+    <div id="map" style="height: 80vh;"></div>
+        <div id="mapLegend"></div>
+
+    <div class="filters">
+        <label>
+            <input type="checkbox" id="longtermcare" checked> Long Term Care
+            <select id="longtermcareType">
+                <option value="all">All</option>
+                <option value="Hospice">Hospice</option>
+                <option value="Adult Home">Adult Home</option>
+                <option value="Certified Home Health Agency">Certified Home Health Agency</option>
+                <option value="Residential Health Care Facility">Residential Health Care Facility</option>
+            </select>
+        </label>
         
-    </head>
+        <label>
+            <input type="checkbox" id="hospitals" checked> Hospitals
+        </label>
 
-    <body>
-        <!--put your initial page content here-->
+        <label>
+            <input type="checkbox" id="primarycare" checked> Primary Care
+            <select id="primarycareSpecialty">
+                <option value="all">All</option>
+                <option value="OBGYN">OBGYN</option>
+                <option value="Family Medicine">Family Medicine</option>
+                <option value="Pediatrician">Pediatrician</option>
+                <option value="Internal Medicine">Internal Medicine</option>
+            </select>
+        </label>
+    </div>
 
-        <!--you can also use this space for internal scripts;
-        place these within <script> tags-->
+    <div id="map-instructions">
+        <div class="instruction-div">
+          <strong>Instructions:</strong> 
+          Welcome to the New York State Health Facility Finder. Use the filters above to refine your search for health facilities. Click on any pin to view more details about a specific facility. For a clearer view, you can zoom in and out using the plus and minus buttons on the map
+        </div>
+        <div class="instruction-div">
+          <strong>How to choose a primary care provider:</strong>
+          Choosing the right health provider is crucial for your long-term well-being. The quality of care, understanding of your health needs, and the trust you place in a provider can significantly impact your health journey. Using this map, you're not just finding a location; you're taking the first step towards a healthier, happier you.
+        </div>
+        <div class="instruction-div">
+          <strong>Sources:</strong>
+          All data comes from <a href="https://health.data.ny.gov/" target="_blank">New York State's Health Data NY</a>.
+        </div>
+      </div>
 
-        <!--put your external script links here-->
-        <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="lib/jquery-3.5.1.js"></script>
-    </body>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/leaflet-search@3.0.0/dist/leaflet-search.min.js"></script>
+    <script type="text/javascript" src="js/main.js" defer></script>
+    <script type="text/javascript" src="lib/jquery-3.5.1.js"></script>
+</body>
+
 </html>

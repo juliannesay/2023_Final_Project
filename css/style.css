@@ -1,1 +1,126 @@
-/*insert style here*/
+/* Styles for the entire body of the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7ff;
+    padding: 10px;
+}
+
+/* Styles for the filters container */
+#filters {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Styles for the map container */
+#map {
+    width: 100%;
+    height: 70vh; 
+    background-color: #e6e6e6;
+    position: relative;
+    z-index: 10;
+    margin-top: 60px;  
+}
+
+/* Different icon colors for various categories in the map */
+.icon-hospital {
+    background-color: red;
+}
+
+.icon-primarycare-obgyn {
+    background-color: #800080; 
+}
+
+.icon-primarycare-family {
+    background-color: #9932CC; 
+}
+
+.icon-primarycare-pediatrician {
+    background-color: #BA55D3; 
+}
+
+.icon-primarycare-internal {
+    background-color: #D8BFD8; 
+}
+
+.icon-longtermcare-hospice {
+    background-color: #008080; 
+}
+
+.icon-longtermcare-adult {
+    background-color: #20B2AA;
+}
+
+.icon-longtermcare-certified {
+    background-color: #48D1CC;
+}
+
+.icon-longtermcare-residential {
+    background-color: #AFEEEE;
+}
+
+/* General style for all icons (hospital, primary care, and long-term care) */
+.icon-hospital, .icon-primarycare, .icon-longtermcare {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: relative;
+}
+
+/* Styles for the map's legend */
+#mapLegend {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    width: 200px;
+}
+
+/* Styles for the map's title */
+#map-title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    z-index: 20; 
+    font-size: 24px; 
+    padding: 10px; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 5px; 
+}
+
+/* Styles for an icon next to the map's title */
+#map-title img {
+    height: 24px;
+    width: 24px;
+    margin-right: 10px;
+}
+
+/* Styles for the map's instructions container */
+#map-instructions {
+    position: relative; 
+    margin-top: 20px;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #999;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Styles for individual instruction divs inside the instructions container */
+.instruction-div {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/* Remove the margin-bottom for the last instruction div */
+.instruction-div:last-child {
+    margin-bottom: 0; 
+}
